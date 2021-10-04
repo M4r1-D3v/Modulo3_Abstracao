@@ -17,4 +17,8 @@ public class Imobiliaria {
     public void setImoveis(List<Imovel> imoveis) {
         this.imoveis = imoveis;
     }
+
+    public void adicionarImovel(Imovel novoImovel){
+        imoveis.add(novoImovel);
+    }
 }
