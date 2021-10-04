@@ -6,6 +6,8 @@ import java.util.List;
 public class Imobiliaria {
     List<Imovel>imoveis = new ArrayList<>();
 
+    public Imobiliaria(){};
+
     public Imobiliaria(List<Imovel> imoveis) {
         this.imoveis = imoveis;
     }
@@ -20,5 +22,12 @@ public class Imobiliaria {
 
     public void adicionarImovel(Imovel novoImovel){
         imoveis.add(novoImovel);
+    }
+
+    @Override
+    public String toString() {
+        return "Imobiliaria{" +
+                "imoveis=" + imoveis +
+                '}';
     }
 }

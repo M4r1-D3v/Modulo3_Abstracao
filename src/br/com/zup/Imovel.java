@@ -51,4 +51,14 @@ public class Imovel {
     public void adicionarMorador(Morador novoMorador){
         moradores.add(novoMorador);
     }
+
+    @Override
+    public String toString() {
+        return "Imovel{" +
+                "endereco='" + endereco + '\'' +
+                ", valorAluguel=" + valorAluguel +
+                ", funcionarioResponsavel=" + funcionarioResponsavel +
+                ", moradores=" + moradores +
+                '}';
+    }
 }
