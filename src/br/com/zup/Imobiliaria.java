@@ -6,4 +6,15 @@ import java.util.List;
 public class Imobiliaria {
     List<Imovel>imoveis = new ArrayList<>();
 
+    public Imobiliaria(List<Imovel> imoveis) {
+        this.imoveis = imoveis;
+    }
+
+    public List<Imovel> getImoveis() {
+        return imoveis;
+    }
+
+    public void setImoveis(List<Imovel> imoveis) {
+        this.imoveis = imoveis;
+    }
 }
