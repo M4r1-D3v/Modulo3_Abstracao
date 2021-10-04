@@ -20,5 +20,10 @@ public class Main {
         System.out.println(imobiliaria1);
         imobiliaria1.adicionarImovel(imovel1);
         System.out.println(imobiliaria1);
+        imovel1.adicionarMorador(morador1);
+        System.out.println(imovel1);
+        imovel1.excluirMoradorCPF("9645313164");
+        System.out.println(imovel1);
+
     }
 }

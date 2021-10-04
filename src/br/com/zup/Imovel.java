@@ -3,7 +3,7 @@ package br.com.zup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Imovel {
+public class Imovel implements ModeloImovel {
     private String endereco;
     private double valorAluguel;
     private Funcionario funcionarioResponsavel;
@@ -50,6 +50,20 @@ public class Imovel {
 
     public void adicionarMorador(Morador novoMorador){
         moradores.add(novoMorador);
+    }
+
+    @Override
+    public void excluirMoradorCPF(String cpf) {
+        Morador moradorExcluido = null;
+
+        for (Morador referencia:moradores) {
+            if (referencia.getCpf().equals(cpf)){
+                moradorExcluido = referencia;
+                System.out.println("Morador localizado e excluído com sucesso.");
+            }
+
+        }
+        moradores.remove(moradorExcluido);
     }
 
     @Override
