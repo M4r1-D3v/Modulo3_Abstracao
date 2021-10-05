@@ -2,12 +2,13 @@ package br.com.zup;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Imovel implements ModeloImovel {
     private String endereco;
     private double valorAluguel;
     private Funcionario funcionarioResponsavel;
-    private List <Morador>moradores = new ArrayList<>();
+    private List<Morador> moradores = new ArrayList<>();
 
     public Imovel(String endereco, double valorAluguel, Funcionario funcionarioResponsavel) {
         this.endereco = endereco;
@@ -48,7 +49,7 @@ public class Imovel implements ModeloImovel {
         this.moradores = moradores;
     }
 
-    public void adicionarMorador(Morador novoMorador){
+    public void adicionarMorador(Morador novoMorador) {
         moradores.add(novoMorador);
     }
 
@@ -56,8 +57,8 @@ public class Imovel implements ModeloImovel {
     public void excluirMoradorCPF(String cpf) {
         Morador moradorExcluido = null;
 
-        for (Morador referencia:moradores) {
-            if (referencia.getCpf().equals(cpf)){
+        for (Morador referencia : moradores) {
+            if (referencia.getCpf().equals(cpf)) {
                 moradorExcluido = referencia;
                 System.out.println("Morador localizado e excluído com sucesso.");
             }
@@ -66,6 +67,7 @@ public class Imovel implements ModeloImovel {
         moradores.remove(moradorExcluido);
     }
 
+    }
     @Override
     public String toString() {
         return "Imovel{" +
@@ -76,3 +78,4 @@ public class Imovel implements ModeloImovel {
                 '}';
     }
 }
+

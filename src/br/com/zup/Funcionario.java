@@ -15,4 +15,11 @@ public class Funcionario extends Pessoa {
     public void setCtps(String ctps) {
         this.ctps = ctps;
     }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "ctps='" + ctps + '\'' +
+                '}';
+    }
 }
